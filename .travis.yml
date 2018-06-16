@@ -1,4 +1,5 @@
-language: generic
+language: bash
 script:
-   -echo hello
-   -bash -e same-cmp
+   -prime
+   -bash -e ./test
+   -./test
