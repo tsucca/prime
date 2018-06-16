@@ -1,5 +1,4 @@
 language: bash
 script:
-   -prime
-   -bash -e ./test
-   -./test
+   -echo "test 1"
+   -./cmp
