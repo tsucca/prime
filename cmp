@@ -2,6 +2,6 @@
 
 ./prime > /tmp/result-$$
 ./test  > /tmp/ans-$$
-diff /tmp/ans-$$ /tmp/result-$$ && echo "prime_file and test_file are same result" || echo "result are not same"
+diff /tmp/ans-$$ /tmp/result-$$ && echo OK || echo NG
 
 rm /tmp/ans-$$ /tmp/result-$$
