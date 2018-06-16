@@ -1,0 +1,26 @@
+#!/bin/bash
+ 
+function getPrimeNumber(){
+	num=`expr $1-1`
+	flg=0
+	for((i=2; i<$num; i++)){
+		m=`expr $1 % $i`
+		if [ $m -eq 0 ]; then
+			flg=$i
+			break
+		fi
+	}
+	echo $flg
+}
+ 
+ 
+# 受け渡し値の取得
+numbers=($@)
+ 
+for((i=2; i<=100; i++)){
+	res=`getPrimeNumber $i`
+	if [ $res -eq 0 ];then
+		numbers+=($i)
+	fi
+}
+echo ${numbers[@]}
