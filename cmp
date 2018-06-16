@@ -1,0 +1,7 @@
+#!/bin/bash
+
+./prime > /tmp/result-$$
+./test  > /tmp/ans-$$
+diff /tmp/ans-$$ /tmp/result-$$ && echo "prime_file and test_file are same result" || echo "result are not same"
+
+rm /tmp/ans-$$ /tmp/result-$$
